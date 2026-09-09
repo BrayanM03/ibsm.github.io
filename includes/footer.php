@@ -5,7 +5,7 @@
                 <h4 class="text-white text-lg font-bold mb-4">IBSM Matamoros</h4>
                 <p class="mb-4">Una iglesia de puertas abiertas, predicando la sana doctrina y el amor de Cristo.</p>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-brand-yellow transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100069338888304" class="text-gray-400 hover:text-brand-yellow transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
                     <a href="#" class="text-gray-400 hover:text-brand-yellow transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
                     <a href="#" class="text-gray-400 hover:text-brand-yellow transition"><i class="ph ph-youtube-logo text-2xl"></i></a>
                 </div>
@@ -14,15 +14,15 @@
                 <h4 class="text-white text-lg font-bold mb-4">Ubicación</h4>
                 <p class="mb-2"><i class="ph ph-map-pin text-brand-yellow mr-2"></i>Las Flores, 87395</p>
                 <p class="mb-2">Heroica Matamoros, Tamaulipas</p>
-                <a href="https://maps.google.com/?q=Las+Flores+87395+Heroica+Matamoros+Tamps" target="_blank" class="text-brand-yellow hover:underline text-sm mt-2 block">Ver en Google Maps</a>
+                <a href="https://maps.app.goo.gl/JvnKYx9XQynTsjgU7" target="_blank" class="text-brand-yellow hover:underline text-sm mt-2 block">Ver en Google Maps</a>
             </div>
             <div>
                 <h4 class="text-white text-lg font-bold mb-4">Enlaces Rápidos</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="creencias.php" class="hover:text-brand-yellow">Plan de Salvación</a></li>
-                    <li><a href="conferencia.php" class="hover:text-brand-yellow">Misiones</a></li>
-                    <li><a href="rutas.php" class="hover:text-brand-yellow">Rutas</a></li>
-                    <li><a href="jovenes.php" class="hover:text-brand-yellow">Jóvenes</a></li>
+                    <li><a href="creencias" class="hover:text-brand-yellow">Plan de Salvación</a></li>
+                    <li><a href="misiones" class="hover:text-brand-yellow">Misiones</a></li>
+                    <li><a href="rutas" class="hover:text-brand-yellow">Rutas</a></li>
+                    <li><a href="jovenes" class="hover:text-brand-yellow">Jóvenes</a></li>
                 </ul>
             </div>
         </div>
@@ -30,8 +30,14 @@
             <p>&copy; <?php echo date('Y'); ?> Iglesia Bautista del Sur de Matamoros. Todos los derechos reservados.</p>
         </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        window.APP_CONFIG = {
+        apiUrl: <?php echo json_encode(API_URL); ?>
+    };
+    
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             if (menu.classList.contains('hidden')) {
